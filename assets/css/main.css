@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #050834;
+  --background-color: #3F4C5C;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #4668a2;
@@ -453,10 +453,10 @@ h6 {
 .cookies-msg{
   z-index: 3;
   width: 100%;
-  background-color: #050834;
+  background-color: #3F4C5C;
   border-width: .5px 0 0 0;
   border-style: solid;
-  border-color: #050949;
+  border-color: #76929E;
   position: fixed;
   bottom: 0%;
   left: 50%;
@@ -491,8 +491,8 @@ h6 {
 }
 
 .cookies-msg .cookies-btn button{
-  background-color: #7CBBF2;
-  color: #fff;
+  background-color: #CECDCB;
+  color: #130c0c;
   border: 0;
   font-weight: 700;
   font-size: 14px;
