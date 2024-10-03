@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>DB Chat - Otimizando o atendimento da sua empresa.</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/LOGO 50x50 DB Chat.png" rel="icon">
+  <link href="assets/img/LOGO 250x250 DB Chat.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/LOGO dbChat Software.png">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="https://dbgerenciador.dbsoftware.com.br/login">Experimente</a>
+
+    </div>
+  </header>
+
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+
+    <!-- cookies - popup -->
+    <div class="cookies-msg" id="cookies-msg">
+      <div class="cookies-txt">
+      <p>Nós usamos cookies para melhorar sua experiência em nosso site, personalizar conteúdo e analisar o tráfego. Ao continuar navegando, 
+      você concorda com o uso de cookies.  
+        <a href="assets/arq/POL%c3%8dTICA%20DE%20PRIVACIDADE%20-%20DB%20Software.pdf" download="POLÍTICA DE PRIVACIDADE - DB Software" 
+        class="cookies-sms">Saiba mais.</a>
+      </p>
+
+      <div class="cookies-btn">
+        <button onclick="aceito()">Aceito</button>
+      </div>
+      </div>
+    </div>
+
+    <script>
+      function aceito() {
+        // Armazena um cookie que indica que o usuário aceitou os cookies
+        document.cookie = "cookiesAceitos=true; path=/; max-age=" + 60 * 60 * 24 * 30; // 30 dias
+        
+        // Oculta a mensagem de cookies
+        document.getElementById('cookies-msg').style.display = 'none';
+      }
+  
+      // Verifica se o cookie já foi aceito ao carregar a página
+      window.onload = function() {
+        if (document.cookie.split(';').some((item) => item.trim().startsWith('cookiesAceitos='))) {
+        document.getElementById('cookies-msg').style.display = 'none';
+        }
+      };
+    </script>
+
+    <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1>Transforme a experiência do seu cliente</h1>
+            <p>Dê adeus às longas esperas e filas desorganizadas. O nosso bdChat ajuda a otimizar a comunicação e a resolver problemas de forma rápida e eficiente.</p>
+            <div class="d-flex">
+              <a href="#services" class="btn-get-started">Experimente já</a>
+              <!--<a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>-->
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/home_teclando.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+
+    <!--<section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="zoom-in">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 120
+                },
+                "1200": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section> --> <!-- /Clients Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Sobre Nós</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              A DB Software possui mais de quinze anos de experiência no mercado de sistemas de informação, consolidando-se como uma referência em soluções de gestão para empresas de pequeno e médio porte. Com sede em Fernandópolis, nossa atuação se estende pelo noroeste paulista, além dos estados de Minas Gerais e Mato Grosso do Sul. Contamos com uma equipe de profissionais altamente qualificados, comprometidos em atender com excelência as necessidades específicas de cada cliente e do mercado
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>Desenvolvemos sitemas de gestão.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Sistema web de gerenciamento de atendimento.</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Cardápio online para seu estabelecimento.</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>A nossa estrutura reflete a dinâmica de um mercado altamente competitivo, no qual nos empenhamos em oferecer produtos que combinam a sofisticação tecnológica com a máxima funcionalidade de nossas soluções. Estamos constantemente investindo em inovações e aperfeiçoamentos, com o objetivo de não apenas atender, mas superar as expectativas de nossos clientes. Nossos produtos evoluem continuamente, incorporando as mais recentes tendências e demandas do mercado, garantindo que entregamos excelência e resultados de alto valor agregado. </p>
+            <a href="#services" class="read-more"><span>Conheça mais</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section why-us light-background" data-builder="section">
+
+      <div class="container-fluid">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+              <h3><span>Simplifique processos e aumente lucros:  </span><strong>As vantagens</strong> dos nossos sistemas de <strong> gestão eficiente.</strong></h3>
+              <p>
+                Adotar um sistema de gestão eficiente é a chave para otimizar processos, melhorar o atendimento e garantir o crescimento sustentável do seu negócio.
+              </p>
+            </div>
+
+            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="faq-item faq-active">
+
+                <h3><span>01</span>Alta demanda por soluções personalizadas:</h3>
+                <div class="faq-content">
+                  <p>Pequenas e médias empresas frequentemente buscam sistemas acessíveis e adaptáveis às suas necessidades específicas, o que cria uma oportunidade de mercado para oferecer soluções sob medida que atendam diferentes setores e demandas.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span>02</span> Menor concorrência com grandes players</h3>
+                <div class="faq-content">
+                  <p>Ao focar em pequenas e médias empresas, a competição com grandes fornecedores de software, que normalmente atendem grandes corporações, é reduzida, permitindo a construção de uma base de clientes fiel em um nicho específico.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span>03</span> Escalabilidade dos produtos</h3>
+                <div class="faq-content">
+                  <p>As soluções podem ser facilmente escaláveis à medida que os clientes crescem. Um sistema bem desenvolvido pode atender tanto empresas menores quanto, ao longo do tempo, expandir para atender empresas de porte maior, mantendo os clientes dentro do mesmo ecossistema de software.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span>04</span>Relacionamento próximo com os clientes</h3>
+                <div class="faq-content">
+                  <p>Trabalhar com empresas menores possibilita um relacionamento mais direto e personalizado, o que facilita a adaptação e melhoria contínua dos produtos, além de aumentar a fidelização e a recomendação boca a boca.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+            <img src="assets/img/why-us.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Serviços</h2>
+        <p>Nossos serviços e produtos são projetados para otimizar a gestão empresarial, oferecendo soluções eficientes e personalizáveis que atendem às necessidades específicas dos nossos clientes.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-3">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><img src="assets/img/LOGO dbErp.png"></div>
+              <h4><a href="" class="stretched-link">DB Erp</a></h4>
+              <p>Oferecemos soluções de gestão inovadoras e eficazes para impulsionar a performance de empresas.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><img src="assets/img/LOGO dbChat Software.png"></div>
+              <h4><a href="" class="stretched-link">DB Chat</a></h4>
+              <p>Com nosso sistema de gestão de atendimento, sua equipe terá ferramentas para organizar filas, priorizar clientes e oferecer um suporte ágil e personalizado.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><img src="assets/img/LOGO dbMenu.png"></div>
+              <h4><a href="" class="stretched-link">DB Menu</a></h4>
+              <p>Seus clientes adoram praticidade. Ofereça a eles um cardápio online interativo e fácil de acessar.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="assets/img/cta-bg.jpg" alt="">
+
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-9 text-center text-xl-start">
+            <h3>Descubra como nossas soluções podem revolucionar sua empresa.</h3>
+            <p>O controle total! Do atendimento ao cliente até a gestão completa da sua empresa. Nossos sistemas integrado oferece soluções completas para que você tenha mais tempo para focar no sucesso do seu negócio.</p>
+          </div>
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#Contato">contate-nos</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- Testimonials Section -->
+
+    <!-- Faq 2 Section -->
+    <section id="faq-2" class="faq-2 section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pergutas Frequentes</h2>
+        <p>
+          Na seção de Perguntas Frequentes da DB Software, reunimos as dúvidas mais comuns sobre nossos serviços. Aqui, você encontrará respostas detalhadas sobre funcionalidades, suporte técnico, processos de implementação e personalização das nossas soluções. Nosso objetivo é garantir que todas as suas perguntas sejam respondidas de forma clara, ajudando a entender como nossos sistemas podem otimizar a gestão do seu negócio e facilitar o seu dia a dia.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Quais são os benefícios de implementar um sistema de gerenciamento personalizado?</h3>
+                <div class="faq-content">
+                  <p>Um sistema de gerenciamento personalizado otimiza processos, aumenta a eficiência, automatiza tarefas repetitivas e melhora a tomada de decisões com base em dados em tempo real.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>O sistema é adaptável às necessidades específicas da minha empresa?</h3>
+                <div class="faq-content">
+                  <p>Sim, nossos sistemas são desenvolvidos sob medida para atender às particularidades de cada negócio, permitindo personalizações que se alinhem com seus processos e demandas.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Como funciona o suporte técnico e as atualizações do sistema?</h3>
+                <div class="faq-content">
+                  <p>Oferecemos suporte técnico contínuo para garantir o funcionamento ideal do sistema, além de realizar atualizações periódicas para incorporar novas funcionalidades e melhorias.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Quais são os custos envolvidos na implementação e manutenção do sistema?</h3>
+                <div class="faq-content">
+                  <p>Os custos variam de acordo com a complexidade e o nível de personalização do sistema. Oferecemos planos flexíveis, que incluem desenvolvimento, implementação e manutenção.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Quanto tempo leva para implementar o sistema de gerenciamento?</h3>
+                <div class="faq-content">
+                  <p>O tempo de implementação depende das funcionalidades e customizações necessárias, mas oferecemos cronogramas claros para que o sistema seja implementado o mais rápido possível.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="700">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>O sistema é seguro?</h3>
+                <div class="faq-content">
+                  <p>Sim, adotamos as melhores práticas de segurança da informação para garantir que seus dados estejam protegidos contra ameaças, como invasões ou perda de informações.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="800">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Posso acessar o sistema de qualquer lugar?</h3>
+                <div class="faq-content">
+                  <p>Sim, nossos sistemas de gerenciamento são baseados na nuvem, o que permite acesso remoto a partir de qualquer dispositivo com conexão à internet, proporcionando flexibilidade e mobilidade.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="900">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Vocês oferecem treinamentos para a equipe utilizar o sistema?</h3>
+                <div class="faq-content">
+                  <p>Sim, fornecemos treinamentos completos para garantir que sua equipe utilize o sistema de forma eficiente e aproveite todas as suas funcionalidades.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="1000">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Como posso solicitar uma demonstração ou orçamento?</h3>
+                <div class="faq-content">
+                  <p>Basta entrar em contato conosco através de nossos canais de atendimento, e agendaremos uma demonstração personalizada ou forneceremos um orçamento detalhado com base nas necessidades do seu negócio.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Fale conosco</h2>
+        <p>Entre em contato com a DB Software! Estamos prontos para tirar suas dúvidas, oferecer suporte técnico ou fornecer mais informações sobre nossas soluções de gestão para seu negócio. Preencha o formulário abaixo ou utilize nossos canais de atendimento para falar diretamente com nossa equipe. Será um prazer ajudar você a encontrar a melhor solução para o seu negócio!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Endereço</h3>
+                  <p>Av. José Camargo Arruda, 663 - Bairro Coester, Fernandópolis - SP</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-whatsapp flex-shrink-0"></i>
+                <div>
+                  <h3>Whatsapp</h3>
+                  <p>(17) 9.9133-9634</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>suporte@dbinformatica.com.br</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.409587606516!2d-50.24777832584664!3d-20.283306749405483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9497f617fe7e45ed%3A0x5955380bacb0033e!2sAv.%20Jos%C3%A9%20Camargo%20Arruda%2C%20663%20-%20Bairro%20Coester%2C%20Fernand%C3%B3polis%20-%20SP%2C%2015603-009%2C%20Brasil!5e0!3m2!1spt-PT!2spt!4v1727021576229!5m2!1spt-PT!2spt" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Seu Nome</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Seu Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Assunto</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Mensagem</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Enviando...</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Sua mensagem foi enviado com sucesso, muito obrigado!</div>
+
+                  <button type="submit">Enviar</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Junte-se à nossa newsletter!</h4>
+            <p>Assine nossa newsletter e receba as últimas novidades sobre nossos produtos e serviços!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Inscreva-se"></div>
+              <div class="loading">Enviando...</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Você se inscrevel com sucesso na nossa newsletter, obrigado!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">DB Software</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Av. José Camargo Arruda, 663</p>
+            <p>Bairro Coester, Fernandópolis - SP</p>
+            <p class="mt-3"><strong>Whatsapp:</strong> <span>(17) 9.9133-9634</span></p>
+            <p><strong>Email:</strong> <span>suporte@dbinformatica.com.br</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#hero">Ínico</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Sobre</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Serviços</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nossos serviços</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">DB ERP</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">DB Chat</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">DB Menu</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Siga-nos nas redes</h4>
+          <p>Fique por dentro de tudo aqui na DB Software. </p>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/profile.php?id=100095327344140"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/db_software/"><i class="bi bi-instagram"></i></a>
+            <!--<a href=""><i class="bi bi-linkedin"></i></a>-->
+            <!--<a href=""><i class="bi bi-youtube"></i></a>-->
+            <!--<a href=""><i class="bi bi-tiktok"></i></a>-->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p><a href="assets/arq/TERMOS DE SERVIÇO DB Software.pdf" download="TERMOS DE SERVIÇOS - DB Software">TERMOS DE SERVIÇOS</a> | <a href="assets/arq/POLÍTICA DE PRIVACIDADE - DB Software.pdf" download="POLÍTICA DE PRIVACIDADE - DB Software">POLÍTICA DE PRIVACIDADE</a></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">DB Software</strong> <span>Todos os direitos reservados</span></p>
+      
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
