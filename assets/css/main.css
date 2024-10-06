@@ -1,8 +1,4 @@
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10,27 +6,27 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Cores globais - As seguintes variáveis ​​de cor são usadas em todo o site. Atualizá-las aqui mudará o esquema de cores de todo o site */
 :root { 
-  --background-color: #F5F5F5; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #3F4C5C; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #76929E; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --background-color: #F5F5F5; /* Background para todo o site, incluindo seções individuais */
+  --default-color: #444444; /* Cor padrão usada para a maioria do conteúdo de texto em todo o site */
+  --heading-color: #3F4C5C; /* Cor para títulos, subtítulos e títulos em todo o site */
+  --accent-color: #76929E; /* Cor de destaque que representa a marca no site. É usada para botões, links e outros elementos que precisam se destacar */
+  --surface-color: #ffffff; /* A cor da superfície é usada como plano de fundo de elementos em caixas dentro de seções, como cartões, caixas de ícones ou outros elementos que exigem uma separação visual do plano de fundo global. */
   --contrast-color: #F5F5F5; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;  /* A cor padrão dos links do menu de navegação principal */
+  --nav-hover-color: #ffffff; /* Aplicado aos links do menu de navegação principal quando eles são passados ​​pelo mouse ou estão ativos */
+  --nav-mobile-background-color: #ffffff; /* Usado como cor de fundo para o menu de navegação móvel */
+  --nav-dropdown-background-color: #ffffff; /* Usado como cor de fundo para itens suspensos que aparecem ao passar o mouse sobre os itens de navegação primários */
+  --nav-dropdown-color: #ffffff; /* Usado para links de navegação dos itens suspensos no menu de navegação. */
+  --nav-dropdown-hover-color: #ffffff; /* Semelhante a --nav-hover-color, esta cor é aplicada aos links de navegação suspensos quando você passa o mouse sobre eles. */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+/* Predefinições de cores - Essas classes substituem as cores globais quando aplicadas a qualquer seção ou elemento, proporcionando a reutilização do mesmo esquema de cores. */
 
 .light-background {
   --background-color: #f5f6f8;
