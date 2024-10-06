@@ -45,11 +45,11 @@
 }
 
 .dark-background {
-  --background-color: #3F4C5C;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #4668a2;
-  --contrast-color: #ffffff;
+  --background-color: #ffffff;
+  --default-color: #3F4C5C;
+  --heading-color: #3F4C5C;
+  --surface-color: #3F4C5C;
+  --contrast-color: #3F4C5C;
 }
 
 /* Smooth scroll */
