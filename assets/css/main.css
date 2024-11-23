@@ -9,9 +9,9 @@
 /* Cores globais - As seguintes variáveis ​​de cor são usadas em todo o site. Atualizá-las aqui mudará o esquema de cores de todo o site */
 :root { 
   --background-color: #F5F5F5; /* Background para todo o site, incluindo seções individuais */
-  --default-color: #444444; /* Cor padrão usada para a maioria do conteúdo de texto em todo o site */
-  --heading-color: #3F4C5C; /* Cor para títulos, subtítulos e títulos em todo o site */
-  --accent-color: #76929E; /* Cor de destaque que representa a marca no site. É usada para botões, links e outros elementos que precisam se destacar */
+  --default-color: #050834; /* Cor padrão usada para a maioria do conteúdo de texto em todo o site */
+  --heading-color: #050834; /* Cor para títulos, subtítulos e títulos em todo o site */
+  --accent-color: #3A63AB; /* Cor de destaque que representa a marca no site. É usada para botões, links e outros elementos que precisam se destacar */
   --surface-color: #ffffff; /* A cor da superfície é usada como plano de fundo de elementos em caixas dentro de seções, como cartões, caixas de ícones ou outros elementos que exigem uma separação visual do plano de fundo global. */
   --contrast-color: #F5F5F5; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -35,10 +35,10 @@
 
 .dark-background {
   --background-color: #ffffff;
-  --default-color: #3F4C5C;
-  --heading-color: #3F4C5C;
-  --surface-color: #3F4C5C;
-  --contrast-color: #3F4C5C;
+  --default-color: #050834;
+  --heading-color: #050834;
+  --surface-color: #050834;
+  --contrast-color: #050834;
 }
 
 /* Smooth scroll */
