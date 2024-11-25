@@ -118,6 +118,14 @@ h6 {
   animation: php-email-form-loading 1s linear infinite;
 }
 
+.form-selec{
+  background-color: #FAFAFA;
+  padding: 8px;
+  border-color: #CDCED6;
+  border-radius: 0;
+}
+
+
 @keyframes php-email-form-loading {
   0% {
     transform: rotate(0deg);
